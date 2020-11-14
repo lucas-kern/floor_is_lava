@@ -19,11 +19,4 @@ public class FallingTile : MonoBehaviour
 		}
          transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
      }
- 
-    //  void OnMouseDown() {
- 
-    //      renderer.enabled = false;
- 
-    //  }
- 
  }
