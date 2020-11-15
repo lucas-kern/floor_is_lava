@@ -14,9 +14,14 @@ public class FallingTile : MonoBehaviour
     }
  
      void Update() {
-         		if (transform.position.y < -25) {
+      if (transform.position.y < -25) {
 			Destroy(gameObject);
 		}
-         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
      }
+
+    void OnTriggerEnter(Collider other) {
+        
+        //on collision have the object fall
+	    transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+	}
  }
